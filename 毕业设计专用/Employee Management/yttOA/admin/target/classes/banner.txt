@@ -1,0 +1,3 @@
+Application Version: ${ruoyi.version}
+Spring Boot Version: ${spring-boot.version}
+员工管理系统正在启动中，请稍后。。。

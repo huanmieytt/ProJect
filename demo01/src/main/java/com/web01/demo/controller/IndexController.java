@@ -1,0 +1,12 @@
+package com.web01.demo.controller;
+
+import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.RequestMapping;
+
+@Controller
+public class IndexController {
+    @RequestMapping("/index")
+    public String toIndex(){
+        return "index";
+    }
+}

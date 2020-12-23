@@ -1,0 +1,15 @@
+# thymeleaf 语法
+spring:
+  thymeleaf:
+    suffix: .html
+    prefix: classpath:/templates/
+  datasource:
+    url: jdbc:mysql://127.0.0.1:3306/ssm?characterEncoding=utf8&useSSL=false
+    username: root
+    password:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+# mybatis 依赖
+mybatis:
+  type-aliases-package: com.web01.demo.mapper
+
+
