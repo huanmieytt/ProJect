@@ -1,0 +1,15 @@
+<component name="ArtifactManager">
+  <artifact name="数据库比对:jar">
+    <output-path>$PROJECT_DIR$/out/artifacts/_jar</output-path>
+    <root id="root">
+      <element id="archive" name="数据库比对.jar">
+        <element id="module-output" name="数据库比对" />
+      </element>
+      <element id="library" level="project" name="Maven: org.apache.commons:commons-math3:3.6.1" />
+      <element id="library" level="project" name="Maven: org.apache.commons:commons-collections4:4.4" />
+      <element id="library" level="project" name="Maven: commons-codec:commons-codec:1.13" />
+      <element id="library" level="project" name="Maven: com.zaxxer:SparseBitSet:1.2" />
+      <element id="library" level="project" name="Maven: org.apache.poi:poi:4.1.2" />
+    </root>
+  </artifact>
+</component>

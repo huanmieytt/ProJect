@@ -1,0 +1,5 @@
+Manifest-Version: 1.0
+Main-Class: com.ytt.demo.ExcelFile
+Class-Path: commons-math3-3.6.1.jar commons-collections4-4.4.jar commons
+ -codec-1.13.jar SparseBitSet-1.2.jar poi-4.1.2.jar
+
