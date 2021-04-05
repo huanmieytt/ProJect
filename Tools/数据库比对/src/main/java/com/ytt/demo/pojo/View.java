@@ -3,21 +3,16 @@ package com.ytt.demo.pojo;
 
 public class View {
 //    序号
-    private String id;
+    private int id;
 //    差异试图名称
     private String viewName;
-//    结构变更
-    private String strucChange;
+//    增加字段
+    private String addColumn;
+//     删除字段
+    private String delColumn;
 //    相关需求
     private String Needs;
 
-    public String getId() {
-        return id;
-    }
-
-    public void setId(String id) {
-        this.id = id;
-    }
 
     public String getViewName() {
         return viewName;
@@ -25,14 +20,6 @@ public class View {
 
     public void setViewName(String viewName) {
         this.viewName = viewName;
-    }
-
-    public String getStrucChange() {
-        return strucChange;
-    }
-
-    public void setStrucChange(String strucChange) {
-        this.strucChange = strucChange;
     }
 
     public String getNeeds() {
@@ -43,10 +30,28 @@ public class View {
         Needs = needs;
     }
 
-    public View(String id, String viewName, String strucChange, String needs) {
+
+    public String getAddColumn() {
+        return addColumn;
+    }
+
+    public void setAddColumn(String addColumn) {
+        this.addColumn = addColumn;
+    }
+
+    public String getDelColumn() {
+        return delColumn;
+    }
+
+    public void setDelColumn(String delColumn) {
+        this.delColumn = delColumn;
+    }
+
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
         this.id = id;
-        this.viewName = viewName;
-        this.strucChange = strucChange;
-        Needs = needs;
     }
 }
