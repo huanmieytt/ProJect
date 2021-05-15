@@ -13,14 +13,16 @@ import java.sql.*;
 import java.util.*;
 
 import java.io.*;
+import java.util.logging.Logger;
 
 public class ExcelFile {
     public static Connection oldConn;
     public static Connection newConn;
-    public static InputStream is;
+//    public static InputStream is;
     public static Properties pro;
     public static String fileName;
     public static String filePath;
+    public static Logger log ;
 
 
 //    public static String username;
@@ -32,14 +34,14 @@ public class ExcelFile {
 //    public static HashMap<String,List<String>> delMap = null;
 
     public static void main(String[] args) throws Exception {
-        is = ExcelFile.class.getClassLoader().getResourceAsStream("database.properties");
+        InputStream is = ExcelFile.class.getClassLoader().getResourceAsStream("database.properties");
+//        InputStream is = ExcelFile.class.getClassLoader().getResourceAsStream("Config.xml");
 //        is = ExcelFile.class.getClassLoader().getResourceAsStream("");
-        File file = new File("");
-        String filePath = file.getCanonicalPath();
-        System.out.println(filePath);
-
-
-        System.out.println(is);
+//        File file = new File("");
+//        String filePath = file.getCanonicalPath();
+//        System.out.println(filePath);
+//        System.out.println(is);
+        log = Logger.getLogger(ExcelFile.class.getClass());
         pro = new Properties();
         pro.load(is);
 //        分别读取旧数据库以及新数据库
