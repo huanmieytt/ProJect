@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>vue测试</title>
+    <script src="node_modules/vue/dist/vue.js"></script>
+</head>
+<body>
+<div id="app">
+    <!--{{}}的使用-->
+    <input type="text" v-model="num"/>
+    <!-- v-on:click的使用-->
+    <button v-on:click="num++">点我＋</button>
+    <button @click="show">点我-</button>
+    <button @click="print('1111')">点我f12看控制太日志</button>
+
+
+
+    <h2>{{name}}</h2>
+    <br>
+    <h2>老唐爱老俞有几分：{{num}}分</h2>
+    <br>
+    <h2>V_text与v_html的使用</h2>
+    <span v-text="msg"></span><br>
+    <span v-html="msg"></span><br>
+    <br>
+
+    <input type="checkbox" v-model="language" value="java">java<br>
+    <input type="checkbox" v-model="language" value="php">php<br>
+    <input type="checkbox" v-model="language" value="c++">c++<br>
+    <h2>你选择了:{{language.join(",")}}</h2>
+
+<!--v-if 和 v-for 的使用-->
+    <h2> v-for 与 v_if 的使用demo:  </h2>
+    <button @click="show = !show">
+        显示用户名
+    </button>
+    <h2 v-for="person in persons" v-if="show" >
+        用户名：{{person.name}}，用户年龄：{{person.age}}
+    </h2>
+
+    <h2 v-for="(person,index) in persons" v-if="person.gender == '男'" >
+        展示男的：  索引：{{index}}  -->  用户名：{{person.name}} --> 用户年龄：{{person.age}} --> 用户性别：{{person.gender}}
+    </h2>
+    <h2 v-for="(person,index,key) in persons" v-if="person.gender == '女'" >
+        展示男女的：key值：{{key}} -->  索引：{{index}}  -->  用户名：{{person.name}} --> 用户年龄：{{person.age}} --> 用户性别：{{person.gender}}
+    </h2>
+    <br>
+    <ul>
+        <li v-for="(person,index) in persons" v-if="person.gender == '男'" >
+            展示男的：  索引：{{index}}  -->  用户名：{{person.name}} --> 用户年龄：{{person.age}} --> 用户性别：{{person.gender}}
+        </li>
+        <li v-for="(person,index) in persons" v-else-if="person.gender == '女'" >
+            展示女的：  索引：{{index}}  -->  用户名：{{person.name}} --> 用户年龄：{{person.age}} --> 用户性别：{{person.gender}}
+        </li>
+        <li v-else >
+            展示非男女型的：  索引：{{index}}  -->  用户名：{{person.name}} --> 用户年龄：{{person.age}} --> 用户性别：{{person.gender}}
+        </li>
+    </ul>
+
+
+</div>
+<script type="text/javascript">
+    var app = new Vue({
+        el:"#app",
+        data:{
+            name:"老唐",
+            num:1,
+            msg:"<h2>我爱老唐</h2>",
+            language:[],
+            persons:[
+                {"name":"张三","age":18,"gender":"男"},
+                {"name":"李四","age":20,"gender":"男"},
+                {"name":"小红","age":19,"gender":"女"},
+                {"name":"小粉","age":21,"gender":"女"},
+                {"name":"小妖","age":1000,"gender":"妖"}
+            ],
+            show:true
+
+        },
+        methods:{
+            show(){
+                this.num--;
+            },
+            print(msg){
+                console.log(msg);
+            },
+            ifShow(){
+                this.show = false;
+            }
+
+        }
+    });
+</script>
+</body>
+</html>
