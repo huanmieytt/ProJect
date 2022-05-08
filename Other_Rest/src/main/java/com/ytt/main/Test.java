@@ -10,6 +10,7 @@ public class Test {
         String[] strs = Strman.split("aj,dk,a,j,kd,a",",");
         for(String i : strs){
             System.out.println(i);
+            System.out.println("jjj");
         }
 //        Boolean b = Strman.contains("aaaaab","aaaab");
 //        System.out.println(b);
